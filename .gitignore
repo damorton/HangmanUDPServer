@@ -1,7 +1,10 @@
+libhangman
+cmake_install.cmake
+CMakeFiles
+CMakeCache.txt
 .DS_Store
 bin
 external
-makefile
 .project
 .cproject
 Debug
