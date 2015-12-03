@@ -18,3 +18,7 @@ $ make
 
 Libraries used in the project are built and installed using cmake.
 
+# Testing
+
+Currently testing Heroku as deployment option
+
