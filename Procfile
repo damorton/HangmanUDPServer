@@ -1,1 +1,1 @@
-server: ls -al 
+server: bin/serverUDP 1071 
