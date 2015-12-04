@@ -41,4 +41,4 @@ add_dependencies(serverUDP libhangman)
 target_link_libraries(serverUDP ${PROJECT_LINK_LIBS} )
 
 # Install the binary file in the bin/ folder
-install(TARGETS serverUDP DESTINATION bin)
+#install(TARGETS serverUDP DESTINATION bin)
