@@ -23,7 +23,7 @@ if(UNIX AND NOT APPLE)
 else()
   set(PROJECT_LINK_LIBS libhangman.dylib)
 endif()
-link_directories(external/libhangman/lib)
+link_directories(${CMAKE_SOURCE_DIR}/external/libhangman/lib)
  
 # Set sources for target
 set(SOURCES src/udp_server.c)
