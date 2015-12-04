@@ -2,6 +2,8 @@ cmake_minimum_required(VERSION 3.4)
 project (serverUDP)
 include(ExternalProject)
 
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+
 set(libhangman_PREFIX ${CMAKE_CURRENT_BINARY_DIR}/libhangman)
 set(libhangman_SOURCE_DIR ${CMAKE_SOURCE_DIR}/external/libhangman)
 
@@ -11,7 +13,6 @@ ExternalProject_Add(libhangman
    INSTALL_COMMAND ""
    SOURCE_DIR ${libhangman_SOURCE_DIR}
 )
-
 
 # Include API .h files for libs
 #include_directories(${libhangman_SOURCE_DIR}/include)
