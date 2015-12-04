@@ -1,1 +1,1 @@
-spinup: bin/serverUDP $PORT
+web: bash -c './bin/serverUDP $PORT'
