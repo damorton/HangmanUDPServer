@@ -1,1 +1,1 @@
-web: bin/serverUDP $PORT 
+server: serverUDP 1071 
