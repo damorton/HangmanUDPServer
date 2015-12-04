@@ -1,4 +1,3 @@
-i
 # Hangman UDP Server
 
 Hangman is a networked game using a BSD Sockets to communicate between client and server. It is built using libhangman which uses libsocket for network communications.
