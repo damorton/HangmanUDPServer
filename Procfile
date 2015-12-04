@@ -1,1 +1,1 @@
-web: bash -c 'serverUDP $PORT'
+web: serverUDP $PORT 
