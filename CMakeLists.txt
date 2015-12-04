@@ -31,7 +31,7 @@ endif()
 set(SOURCES src/udp_server.c)
 
 # Build the executable into the bin folder
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BUILD_DIR}/bin)
 
 # Create the binary file
 add_executable(serverUDP ${SOURCES})
