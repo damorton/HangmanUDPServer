@@ -1,1 +1,1 @@
-worker: ./serverUDP $PORT
+worker: ./start
