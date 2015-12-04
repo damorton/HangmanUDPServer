@@ -1,1 +1,1 @@
-worker: ./serverUDP 1071 &
+worker: ./bin/serverUDP 1071 &
