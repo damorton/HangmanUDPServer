@@ -1,1 +1,1 @@
-spinup: bin/serverUDP 1071
+spinup: bin/serverUDP $PORT
