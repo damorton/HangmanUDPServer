@@ -10,4 +10,4 @@ external
 Debug
 *~
 build
-makefile
+Makefile
