@@ -5,7 +5,7 @@ include(ExternalProject)
 # Dependencies
 # libhangman
 set(libhangman_PREFIX ${CMAKE_BINARY_DIR}/libhangman)
-set(libhangman_SOURCE_DIR ${CMAKE_BINARY_DIR}/external/libhangman)
+set(libhangman_SOURCE_DIR ${CMAKE_SOURCE_DIR}/external/libhangman)
 
 ExternalProject_Add(libhangman
    PREFIX ${libhangman_PREFIX}
