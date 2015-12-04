@@ -10,7 +10,7 @@ set(libhangman_SOURCE_DIR ${CMAKE_SOURCE_DIR}/external/libhangman)
 ExternalProject_Add(libhangman
    PREFIX ${libhangman_PREFIX}
    GIT_REPOSITORY https://github.com/damorton/libhangman.git
-   #INSTALL_COMMAND ""
+   INSTALL_COMMAND ""
    SOURCE_DIR ${libhangman_SOURCE_DIR}
 )
 
