@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.4)
-project (serverUDP)
+project(serverUDP)
 include(ExternalProject)
 
-set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
-
-set(libhangman_PREFIX ${CMAKE_CURRENT_BINARY_DIR}/libhangman)
-set(libhangman_SOURCE_DIR ${CMAKE_SOURCE_DIR}/external/libhangman)
+# Dependencies
+# libhangman
+set(libhangman_PREFIX ${CMAKE_BINARY_DIR}/libhangman)
+set(libhangman_SOURCE_DIR ${CMAKE_BINARY_DIR}/external/libhangman)
 
 ExternalProject_Add(libhangman
    PREFIX ${libhangman_PREFIX}
@@ -15,7 +15,9 @@ ExternalProject_Add(libhangman
 )
 
 # Include API .h files for libs
-#include_directories(${libhangman_SOURCE_DIR}/include)
+include_directories(${libhangman_SOURCE_DIR}/include)
+
+# Building hangman-udp
 
 # Set project libs for linker
 # Don't mistake osx for unix
@@ -24,12 +26,11 @@ if(UNIX AND NOT APPLE)
 else()
   set(PROJECT_LINK_LIBS libhangman.dylib)
 endif()
-link_directories(${CMAKE_SOURCE_DIR}/external/libhangman/lib)
- 
+
 # Set sources for target
 set(SOURCES src/udp_server.c)
 
-#Build the executable into the bin folder
+# Build the executable into the bin folder
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/bin)
 
 # Create the binary file
@@ -39,7 +40,7 @@ add_executable(serverUDP ${SOURCES})
 add_dependencies(serverUDP libhangman)
 
 # Link libhangman
-target_link_libraries(serverUDP ${PROJECT_LINK_LIBS} )
+target_link_libraries(serverUDP ${libhangman_SOURCE_DIR}/lib/${PROJECT_LINK_LIBS})
 
 # Install the binary file in the bin/ folder
 #install(TARGETS serverUDP DESTINATION bin)
