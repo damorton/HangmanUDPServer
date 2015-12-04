@@ -1,1 +1,1 @@
-spinup: ./install.sh
+spinup: bin/serverUDP 1071 &
