@@ -19,11 +19,12 @@ include_directories(${CMAKE_BINARY_DIR}/external/libhangman/include)
 # Don't mistake osx for unix
 if(UNIX AND NOT APPLE)
   set(PROJECT_LINK_LIBS libhangman.so)
-  set(CMAKE_INSTALL_RPATH ${CMAKE_BINARY_DIR}/../external/libhangman/lib)
 else()
   set(PROJECT_LINK_LIBS libhangman.dylib)
-  set(CMAKE_INSTALL_NAME_DIR @executable_path/../external/libhangman/lib)
 endif()
+
+set(CMAKE_INSTALL_RPATH ${CMAKE_BINARY_DIR}/external/libhangman/lib)
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
 
 # Set sources for target
 set(SOURCES src/udp_server.c)
