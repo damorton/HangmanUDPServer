@@ -2,20 +2,16 @@ cmake_minimum_required(VERSION 2.8)
 project(serverUDP)
 include(ExternalProject)
 
-# Dependencies
-# libhangman
-set(libhangman_PREFIX ${CMAKE_BINARY_DIR}/libhangman)
-set(libhangman_SOURCE_DIR ${CMAKE_SOURCE_DIR}/external/libhangman)
-
 ExternalProject_Add(libhangman
-   PREFIX ${libhangman_PREFIX}
+   PREFIX ${CMAKE_BINARY_DIR}/build/libhangman
    GIT_REPOSITORY https://github.com/damorton/libhangman.git
    INSTALL_COMMAND ""
-   SOURCE_DIR ${libhangman_SOURCE_DIR}
+   BINARY_DIR ${CMAKE_BINARY_DIR}/external/libhangman
+   SOURCE_DIR ${CMAKE_BINARY_DIR}/external/libhangman
 )
 
 # Include API .h files for libs
-include_directories(${libhangman_SOURCE_DIR}/include)
+include_directories(${CMAKE_BINARY_DIR}/external/libhangman/include)
 
 # Building hangman-udp
 
@@ -40,7 +36,4 @@ add_executable(serverUDP ${SOURCES})
 add_dependencies(serverUDP libhangman)
 
 # Link libhangman
-target_link_libraries(serverUDP ${libhangman_SOURCE_DIR}/lib/${PROJECT_LINK_LIBS})
-
-# Install the binary file in the bin/ folder
-#install(TARGETS serverUDP DESTINATION bin)
+target_link_libraries(serverUDP ${CMAKE_BINARY_DIR}/external/libhangman/lib/${PROJECT_LINK_LIBS})
