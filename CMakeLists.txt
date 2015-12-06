@@ -36,7 +36,7 @@ set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 add_executable(serverUDP ${SOURCES})
 
 add_custom_command(OUTPUT install_lib
-                   COMMAND cp external/libhangman/lib/${PROJECT_LINK_LIBS} ./lib/)
+                   COMMAND cp external/libhangman/lib/${PROJECT_LINK_LIBS} ./)
 
 add_custom_target(install_lib_done DEPENDS install_lib)
 
