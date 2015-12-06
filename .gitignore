@@ -10,4 +10,4 @@ external
 Debug
 *~
 build
-install_manifest
+install_manifest.txt
