@@ -24,7 +24,7 @@ else()
 endif()
 
 set(CMAKE_INSTALL_RPATH $ORIGIN/../external/libhangman/lib)
-#set(CMAKE_INSTALL_RPATH_USE_LINK_PATH TRUE)
+set(CMAKE_INSTALL_RPATH_USE_LINK_PATH false)
 
 # Set sources for target
 set(SOURCES src/udp_server.c)
