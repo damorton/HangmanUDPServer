@@ -23,7 +23,7 @@ else()
   set(PROJECT_LINK_LIBS libhangman.dylib)
 endif()
 
-set(CMAKE_INSTALL_RPATH ../external/libhangman/lib)
+#set(CMAKE_INSTALL_RPATH ../external/libhangman/lib)
 #set(CMAKE_INSTALL_RPATH_USE_LINK_PATH false)
 
 # Set sources for target
