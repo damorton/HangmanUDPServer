@@ -40,3 +40,4 @@ add_dependencies(serverUDP libhangman)
 
 # Link libhangman
 target_link_libraries(serverUDP ${CMAKE_BINARY_DIR}/external/libhangman/lib/${PROJECT_LINK_LIBS})
+install(TARGETS serverUDP DESTINATION ${CMAKE_BINARY_DIR}/bin)
