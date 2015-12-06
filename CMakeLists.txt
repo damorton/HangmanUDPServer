@@ -19,8 +19,10 @@ include_directories(${CMAKE_BINARY_DIR}/external/libhangman/include)
 # Don't mistake osx for unix
 if(UNIX AND NOT APPLE)
   set(PROJECT_LINK_LIBS libhangman.so)
+  set(CMAKE_INSTALL_RPATH ${CMAKE_BINARY_DIR}/../external/libhangman/lib)
 else()
   set(PROJECT_LINK_LIBS libhangman.dylib)
+  set(CMAKE_INSTALL_NAME_DIR @executable_path/../external/libhangman/lib)
 endif()
 
 # Set sources for target
