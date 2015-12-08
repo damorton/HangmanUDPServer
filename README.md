@@ -5,9 +5,7 @@ Hangman is a networked game using a BSD Sockets to communicate between client an
 ## Build
 
 ```
-$ mkdir build
-$ cd build
-$ cmake ..
+$ cmake .
 $ make
 ```
 
