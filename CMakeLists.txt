@@ -50,6 +50,9 @@ add_executable(serverUDP ${SOURCES})
 
 #add_custom_target(install_lib_done DEPENDS install_lib)
 
+find_library(hangman
+    HINTS ${CMAKE_BINARY_DIR}/external/libhangman)
+
 # Add dependencies for lib
 add_dependencies(serverUDP libhangman)
 #add_dependencies(serverUDP install_lib_done)
