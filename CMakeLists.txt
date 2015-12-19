@@ -1,5 +1,4 @@
 cmake_minimum_required(VERSION 2.8)
-
 project(serverUDP)
 include(ExternalProject)
 
@@ -11,7 +10,6 @@ ExternalProject_Add(libhangman
    SOURCE_DIR ${CMAKE_BINARY_DIR}/external/libhangman
 )
 
-# Include API .h files for libs
 include_directories(${CMAKE_BINARY_DIR}/external/libhangman/include)
 include_directories(${CMAKE_BINARY_DIR}/include)
 
@@ -22,8 +20,6 @@ else()
 endif()
 
 set(SOURCES src/udp_server.c)
-
-#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
 link_directories(./external/libhangman/)
 
