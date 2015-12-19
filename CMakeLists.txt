@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8)
-cmake_policy(SET CMP0015 NEW)
+#cmake_policy(SET CMP0015 NEW)
 
 project(serverUDP)
 include(ExternalProject)
@@ -42,7 +42,8 @@ endif()
 set(SOURCES src/udp_server.c)
 
 # Build the executable into the bin folder
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
 link_directories(external/libhangman/lib/)
 

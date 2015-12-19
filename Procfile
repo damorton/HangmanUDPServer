@@ -1,1 +1,1 @@
-server: bin/serverUDP 1071 
+server: build/serverUDP 1071 
