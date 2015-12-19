@@ -14,6 +14,7 @@ ExternalProject_Add(libhangman
 
 # Include API .h files for libs
 include_directories(${CMAKE_BINARY_DIR}/external/libhangman/include)
+include_directories(${CMAKE_BINARY_DIR}/include)
 
 # Building hangman-udp
 
