@@ -21,7 +21,7 @@ endif()
 
 set(SOURCES src/udp_server.c)
 
-link_directories(./external/libhangman/)
+link_directories(external/libhangman/)
 
 add_executable(serverUDP ${SOURCES})
 
