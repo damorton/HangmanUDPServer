@@ -44,15 +44,15 @@ set(SOURCES src/udp_server.c)
 # Build the executable into the bin folder
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 
+link_directories(${PROJECT_SOURCE_DIR}/external/libhangman/lib/)
+
 # Create the binary file
 add_executable(serverUDP ${SOURCES})
-
-#link_directories(../external/libhangman/lib/)
 
 # Add dependencies for lib
 add_dependencies(serverUDP libhangman)
 
 # Link libhangman
 #target_link_libraries(serverUDP ${CMAKE_CURRENT_BINARY_DIR}/external/libhangman/lib/${PROJECT_LINK_LIBS})
-target_link_libraries(serverUDP ${CMAKE_CURRENT_BINARY_DIR}/external/libhangman/lib/${PROJECT_LINK_LIBS})
+target_link_libraries(serverUDP ${PROJECT_LINK_LIBS})
 #install(TARGETS serverUDP DESTINATION ../bin )
