@@ -10,8 +10,6 @@ ExternalProject_Add(libhangman
    SOURCE_DIR ${CMAKE_BINARY_DIR}/external/libhangman
 )
 
-include_directories(${CMAKE_BINARY_DIR}/include/libhangman)
-
 if(UNIX AND NOT APPLE)
   set(PROJECT_LINK_LIBS libhangman.so)
 else()
