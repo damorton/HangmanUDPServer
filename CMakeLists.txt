@@ -23,9 +23,9 @@ endif()
 
 set(SOURCES src/udp_server.c)
 
-set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
+#set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
 
-link_directories(external/libhangman/)
+link_directories(./external/libhangman/)
 
 add_executable(serverUDP ${SOURCES})
 
