@@ -1,1 +1,1 @@
-server: ./serverUDP $PORT 
+server: ./serverUDP $SERVICE 
