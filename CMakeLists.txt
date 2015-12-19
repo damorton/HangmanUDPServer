@@ -10,8 +10,7 @@ ExternalProject_Add(libhangman
    SOURCE_DIR ${CMAKE_BINARY_DIR}/external/libhangman
 )
 
-include_directories(${CMAKE_BINARY_DIR}/external/libhangman/include)
-include_directories(${CMAKE_BINARY_DIR}/include)
+include_directories(${CMAKE_BINARY_DIR}/include/libhangman)
 
 if(UNIX AND NOT APPLE)
   set(PROJECT_LINK_LIBS libhangman.so)
@@ -22,6 +21,7 @@ endif()
 set(SOURCES src/udp_server.c)
 
 link_directories(external/libhangman/)
+link_directories(external/libhangman/external/libsocket/)
 
 add_executable(serverUDP ${SOURCES})
 
